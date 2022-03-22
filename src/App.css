@@ -39,28 +39,29 @@
 
 /* custom styles */
 
-.createHook {
+.createHook h1 {
+  padding: 20px;
+}
+
+.createHookForm * {
+  max-width: 500px;
+  min-width: 300px;
+  margin: 10px;
+}
+
+.viewHook {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
-
-.flexOuter li,
-.flexInner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-pre {
+.viewHook pre {
+  align-self: center;
   background: #eee;
   padding: 1rem;
-  overflow: scroll;
+  overflow: auto;
   border-radius: 3px;
-  max-width: 80ch;
-}
+  /* max-width: 90ch; */
+  min-width: 40ch;
 
-pre code {
   text-align: left;
   white-space: pre;
   word-spacing: normal;

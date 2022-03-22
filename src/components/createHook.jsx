@@ -21,6 +21,7 @@ function CreateHook() {
     e.preventDefault();
     if (hookTitle.length === 0 || hookBody.length === 0) {
       alert('Please enter hook title and hook code ');
+      return;
     }
     setCompleteHook({ title: hookTitle, body: hookBody });
     setHookTitle('');
@@ -30,26 +31,28 @@ function CreateHook() {
   return (
     <div className="createHook">
       <h1>Enter the hook</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="createHookForm">
         <input
           type="text"
           placeholder="Hook title"
           value={hookTitle}
           onChange={handleTitleChange}
         />
+        <br />
         <textarea
+          rows="10"
+          cols="20"
           type="text"
           placeholder="Hook body"
           value={hookBody}
           onChange={handleBodyChange}
         />
+        <br />
         <button type="submit">Submit hook</button>
       </form>
       <div>
-        {completeHook.length === 0 ? (
-          ''
-        ) : (
-          <div>
+        {Object.keys(completeHook).length === 0 ? null : (
+          <div className="viewHook">
             <h2>View hook</h2>
             <h3>Title:</h3>
             <p> {completeHook.title}</p>
@@ -59,7 +62,6 @@ function CreateHook() {
             </pre>
           </div>
         )}
-        {console.log(completeHook)}
       </div>
     </div>
   );
