@@ -39,6 +39,10 @@
 
 /* custom styles */
 
+.createHook {
+  text-align: center;
+}
+
 .createHook h1 {
   padding: 20px;
 }

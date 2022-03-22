@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Navbar from '../components/navbar';
+import '../App.css';
 function CreateHook() {
   //state elements:
   //hookTitle
@@ -30,7 +32,8 @@ function CreateHook() {
 
   return (
     <div className="createHook">
-      <h1>Enter the hook</h1>
+      <Navbar />
+      <h1>Create a hook</h1>
       <form onSubmit={handleSubmit} className="createHookForm">
         <input
           type="text"

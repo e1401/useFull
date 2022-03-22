@@ -1,0 +1,24 @@
+.navbarContainer {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 50px;
+  background-color: #eee;
+}
+
+.navbarContainer h3 {
+  padding-left: 20px;
+}
+
+.navbarItems {
+  /* border: 1px solid blue; */
+  list-style-type: none;
+  display: flex;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 0 20px 0 20px;
+  justify-content: space-between;
+}
