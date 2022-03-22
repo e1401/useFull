@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+/* custom styles */
+
+.createHook {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flexOuter li,
+.flexInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+pre {
+  background: #eee;
+  padding: 1rem;
+  overflow: scroll;
+  border-radius: 3px;
+  max-width: 80ch;
+}
+
+pre code {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+}
