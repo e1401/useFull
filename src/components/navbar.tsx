@@ -1,25 +1,39 @@
 import { Link } from 'react-router-dom';
 import './navbar.css';
+import { Navbar, Container } from 'react-bootstrap';
 
-function Navbar() {
+function Nav() {
   return (
-    <div className="navbarContainer">
-      <Link to="/">
-        <h3>useFull</h3>
-      </Link>
+    // <div className="navbarContainer">
+    //   <Link to="/">
+    //     <h3>useFull</h3>
+    //   </Link>
 
-      <div className="navbarItems">
-        <li>
-          <Link to="/createhook">Create a hook</Link>
-        </li>
+    //
+    //     <li></li>
+    //   </div>
+    // </div>
 
-        <li>
-          <Link to="/hooklist">List of hooks</Link>
-        </li>
-        <li></li>
-      </div>
-    </div>
+    //BOOTSTRAP NAVBAR
+    <>
+      <Navbar bg="light">
+        <Container>
+          <Link to="/">
+            <Navbar.Brand>useFull</Navbar.Brand>
+          </Link>
+          <div className="navbarItems">
+            <li>
+              <Link to="/createhook">Create a hook</Link>
+            </li>
+
+            <li>
+              <Link to="/hooklist">List of hooks</Link>
+            </li>
+          </div>
+        </Container>
+      </Navbar>
+    </>
   );
 }
 
-export default Navbar;
+export default Nav;

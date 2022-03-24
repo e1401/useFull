@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 import Navbar from '../components/navbar';
-import '../App.css';
+import { Button, Container, Form, FormGroup } from 'react-bootstrap';
+// import '../App.css';
 function CreateHook() {
   //state elements:
   //hookTitle
@@ -25,7 +26,7 @@ function CreateHook() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (hookTitle.length === 0 || hookBody.length === 0) {
-      alert('Please enter hook title and hook code ');
+      alert('Please enter hook title and hook code');
       return;
     }
     setCompleteHook({ title: hookTitle, body: hookBody });
@@ -36,38 +37,46 @@ function CreateHook() {
   return (
     <div className="createHook">
       <Navbar />
-      <h1>Create a hook</h1>
-      <form onSubmit={handleSubmit} className="createHookForm">
-        <input
-          type="text"
-          placeholder="Hook title"
-          value={hookTitle}
-          onChange={handleTitleChange}
-        />
+      <Container fluid="sm" className=" mt-3">
+        <h1>Create a hook</h1>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="text"
+              value={hookTitle}
+              onChange={handleTitleChange}
+              placeholder="Hook title"
+            />
+          </Form.Group>
+          <FormGroup>
+            <Form.Control
+              as="textarea"
+              placeholder="Hook body"
+              value={hookBody}
+              onChange={handleBodyChange}
+              style={{ height: '200px' }}
+            />
+          </FormGroup>
+          <br />
+          <Button variant="primary" type="submit">
+            Submit hook
+          </Button>
+        </Form>
         <br />
-        <textarea
-          rows={10}
-          cols={20}
-          placeholder="Hook body"
-          value={hookBody}
-          onChange={handleBodyChange}
-        />
-        <br />
-        <button type="submit">Submit hook</button>
-      </form>
-      <div>
-        {Object.keys(completeHook.title).length === 0 ? null : (
-          <div className="viewHook">
-            <h2>View hook</h2>
-            <h3>Title:</h3>
-            <p> {completeHook.title}</p>
-            <h3>Code:</h3>
-            <pre>
-              <code>{completeHook.body}</code>
-            </pre>
-          </div>
-        )}
-      </div>
+        <div>
+          {Object.keys(completeHook.title).length === 0 ? null : (
+            <div className="viewHook">
+              <h2>View hook</h2>
+              <h3>Title:</h3>
+              <p> {completeHook.title}</p>
+              <h3>Code:</h3>
+              <pre>
+                <code>{completeHook.body}</code>
+              </pre>
+            </div>
+          )}
+        </div>
+      </Container>
     </div>
   );
 }
