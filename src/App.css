@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* custom styles */
+
+.createHook {
+  text-align: center;
+}
+
+.createHook h1 {
+  padding: 20px;
+}
+
+.createHookForm * {
+  max-width: 500px;
+  min-width: 300px;
+  margin: 10px;
+}
+
+.viewHook {
+  display: flex;
+  flex-direction: column;
+}
+.viewHook pre {
+  align-self: center;
+  background: #eee;
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 3px;
+  /* max-width: 90ch; */
+  min-width: 40ch;
+
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+}

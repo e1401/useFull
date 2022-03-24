@@ -9,17 +9,20 @@ function CreateHook() {
   //complete hook
   const [hookTitle, setHookTitle] = useState('');
   const [hookBody, setHookBody] = useState('');
-  const [completeHook, setCompleteHook] = useState('');
+  const [completeHook, setCompleteHook] = useState({
+    title: '',
+    body: ''
+  });
 
-  const handleTitleChange = (e) => {
+  const handleTitleChange = (e: any) => {
     setHookTitle(e.target.value);
   };
 
-  const handleBodyChange = (e) => {
+  const handleBodyChange = (e: any) => {
     setHookBody(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     if (hookTitle.length === 0 || hookBody.length === 0) {
       alert('Please enter hook title and hook code ');
@@ -43,9 +46,8 @@ function CreateHook() {
         />
         <br />
         <textarea
-          rows="10"
-          cols="20"
-          type="text"
+          rows={10}
+          cols={20}
           placeholder="Hook body"
           value={hookBody}
           onChange={handleBodyChange}
@@ -54,7 +56,7 @@ function CreateHook() {
         <button type="submit">Submit hook</button>
       </form>
       <div>
-        {Object.keys(completeHook).length === 0 ? null : (
+        {Object.keys(completeHook.title).length === 0 ? null : (
           <div className="viewHook">
             <h2>View hook</h2>
             <h3>Title:</h3>

@@ -4,7 +4,9 @@ import './navbar.css';
 function Navbar() {
   return (
     <div className="navbarContainer">
-      <h3>useFull</h3>
+      <Link to="/">
+        <h3>useFull</h3>
+      </Link>
 
       <div className="navbarItems">
         <li>
@@ -14,9 +16,7 @@ function Navbar() {
         <li>
           <Link to="/hooklist">List of hooks</Link>
         </li>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
+        <li></li>
       </div>
     </div>
   );
