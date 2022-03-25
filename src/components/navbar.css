@@ -1,5 +1,4 @@
 .navbarContainer {
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -11,6 +10,11 @@
 
 .navbarContainer h3 {
   padding-left: 20px;
+  text-decoration: none;
+}
+
+.navbarContainer a {
+  text-decoration: none;
 }
 
 .navbarItems {
@@ -18,7 +22,16 @@
   list-style-type: none;
   display: flex;
   max-width: 500px;
-  min-width: 300px;
+  min-width: 250px;
   padding: 0 20px 0 20px;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.navbarItems li :hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbarItems a {
+  text-decoration: none;
 }
