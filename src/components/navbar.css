@@ -1,8 +1,4 @@
 .navbarContainer {
-<<<<<<< HEAD
-=======
-  /* border: 2px solid red; */
->>>>>>> 263ef3a0f345fefc4b68d9dad6493b342b326fca
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -14,14 +10,11 @@
 
 .navbarContainer h3 {
   padding-left: 20px;
-<<<<<<< HEAD
   text-decoration: none;
 }
 
 .navbarContainer a {
   text-decoration: none;
-=======
->>>>>>> 263ef3a0f345fefc4b68d9dad6493b342b326fca
 }
 
 .navbarItems {
@@ -29,7 +22,6 @@
   list-style-type: none;
   display: flex;
   max-width: 500px;
-<<<<<<< HEAD
   min-width: 250px;
   padding: 0 20px 0 20px;
   justify-content: space-around;
@@ -42,9 +34,4 @@
 
 .navbarItems a {
   text-decoration: none;
-=======
-  min-width: 300px;
-  padding: 0 20px 0 20px;
-  justify-content: space-between;
->>>>>>> 263ef3a0f345fefc4b68d9dad6493b342b326fca
 }
