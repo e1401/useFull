@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Navbar from '../components/navbar';
+// import Navbar from '../components/navbar';
 import { Button, Container, Form, FormGroup } from 'react-bootstrap';
 // import '../App.css';
 function CreateHook() {
@@ -36,7 +36,6 @@ function CreateHook() {
 
   return (
     <div className="createHook">
-      <Navbar />
       <Container fluid="sm" className=" mt-3">
         <h1>Create a hook</h1>
         <Form onSubmit={handleSubmit}>
