@@ -29,6 +29,10 @@ function Nav() {
             <li>
               <Link to="/hooklist">List of hooks</Link>
             </li>
+            <li>
+              {/* todo */}
+              <Link to="/">Logout</Link>
+            </li>
           </div>
         </Container>
       </Navbar>

@@ -18,13 +18,16 @@
 }
 
 .navbarItems {
-  /* border: 1px solid blue; */
+  /* border: 1px solid red; */
   list-style-type: none;
   display: flex;
-  max-width: 500px;
-  min-width: 250px;
-  padding: 0 20px 0 20px;
-  justify-content: space-around;
+  width: 500px;
+
+  justify-content: flex-end;
+}
+
+.navbarItems li {
+  margin-left: 6%;
 }
 
 .navbarItems li :hover {
