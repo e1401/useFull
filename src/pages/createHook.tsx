@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import { addHook } from '../store';
 import { useState } from 'react';
 
 // import Navbar from '../components/navbar';
@@ -15,6 +17,9 @@ function CreateHook() {
     body: ''
   });
 
+  //dispatch to store
+  const dispatch = useDispatch();
+
   const handleTitleChange = (e: any) => {
     setHookTitle(e.target.value);
   };
@@ -30,9 +35,11 @@ function CreateHook() {
       return;
     }
     setCompleteHook({ title: hookTitle, body: hookBody });
+    dispatch(addHook({ title: hookTitle, body: hookBody }));
     setHookTitle('');
     setHookBody('');
   };
+  // console.log(completeHook);
 
   return (
     <div className="createHook">

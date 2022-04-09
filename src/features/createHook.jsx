@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import '../App.css';
 function CreateHook() {
   //state elements:
