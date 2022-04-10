@@ -68,20 +68,6 @@ function CreateHook() {
             Submit hook
           </Button>
         </Form>
-        <br />
-        <div>
-          {Object.keys(completeHook.title).length === 0 ? null : (
-            <div className="viewHook">
-              <h2>View hook</h2>
-              <h3>Title:</h3>
-              <p> {completeHook.title}</p>
-              <h3>Code:</h3>
-              <pre>
-                <code>{completeHook.body}</code>
-              </pre>
-            </div>
-          )}
-        </div>
       </Container>
     </div>
   );
