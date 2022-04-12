@@ -11,10 +11,16 @@ interface HookSliceState {
 }
 
 const initialState: HookSliceState = {
-  hooks: []
+  hooks: [
+    {
+      id: 1,
+      title: 'useHello',
+      body: `const useHello = () => console.log('Ola Mundo')`
+    }
+  ]
 };
 
-let initialId: number = 0;
+let initialId: number = 1;
 
 export const hookSlice = createSlice({
   name: 'hooks',
