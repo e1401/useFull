@@ -11,7 +11,7 @@ function Footer() {
         <Row xs={1} md={2} className="justify-content-end">
           <div className="mb-3">
             <p className="fs-6 text-muted">
-              TypeScript adventures with <a href="http://ah-studio.net">Ah-studio</a> in {year}{' '}
+              TypeScript adventures with <a href="http://ah-studio.net">Ah-studio</a> (c) {year}{' '}
             </p>
           </div>
         </Row>

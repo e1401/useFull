@@ -1,11 +1,11 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface Hook {
-  id: number;
+type Hook = {
+  id?: number;
   title: string;
   body: string;
   description?: string;
-}
+};
 
 interface HookSliceState {
   hooks: Hook[];
@@ -55,7 +55,7 @@ export const hookSlice = createSlice({
   name: 'hooks',
   initialState,
   reducers: {
-    addHook: (state, action: PayloadAction<any>) => {
+    addHook: (state, action: PayloadAction<Hook>) => {
       state.hooks = [
         ...state.hooks,
         {
