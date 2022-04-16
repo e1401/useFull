@@ -4,12 +4,13 @@ import { Navbar, Container } from 'react-bootstrap';
 
 function Nav() {
   return (
-    //BOOTSTRAP NAVBAR
     <nav>
-      <Navbar bg="light">
+      <Navbar bg="light" className="mb-3">
         <Container>
           <Link to="/">
-            <Navbar.Brand>useFull</Navbar.Brand>
+            <Navbar.Brand>
+              <strong>useFull</strong>
+            </Navbar.Brand>
           </Link>
           <div className="navbarItems">
             <li>

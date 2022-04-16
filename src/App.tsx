@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Navbar';
+import Footer from './components/Footer';
 import Login from './pages/Login';
 import Hooks from './pages/Hooks';
 import HookList from './pages/hookList';
@@ -11,7 +12,8 @@ import ViewSingleHook from './pages/ViewSingleHook';
 
 function App() {
   return (
-    <div className="App">
+    // <div className="App d-flex flex-column min-vh-100">
+    <div className="App d-flex flex-column min-vh-100">
       <BrowserRouter>
         <Nav />
         <Routes>
@@ -24,6 +26,7 @@ function App() {
 
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectHooks, removeHook } from '../store';
-import { Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -34,21 +34,23 @@ function ViewSingleHook() {
   };
 
   return (
-    <div className="viewHook">
-      <h3> {selectedHook[0].title}</h3>
-      <p>Code:</p>
+    <Container fluid="sm" className=" mt-5">
+      <div className="viewHook">
+        <h3> {selectedHook[0].title}</h3>
+        <p>Code:</p>
 
-      <SyntaxHighlighter
-        language="javascript"
-        style={docco}
-        showLineNumbers={true}
-        wrapLines={true}>
-        {selectedHook[0].body}
-      </SyntaxHighlighter>
-      <Button variant="danger" onClick={() => handleDelete(convertedId)}>
-        Delete
-      </Button>
-    </div>
+        <SyntaxHighlighter
+          language="javascript"
+          style={docco}
+          showLineNumbers={true}
+          wrapLines={true}>
+          {selectedHook[0].body}
+        </SyntaxHighlighter>
+        <Button variant="danger" onClick={() => handleDelete(convertedId)}>
+          Delete
+        </Button>
+      </div>
+    </Container>
   );
 }
 

@@ -4,6 +4,7 @@ interface Hook {
   id: number;
   title: string;
   body: string;
+  description?: string;
 }
 
 interface HookSliceState {
@@ -16,11 +17,39 @@ const initialState: HookSliceState = {
       id: 1,
       title: 'useHello',
       body: `const useHello = () => console.log('Ola Mundo')`
+    },
+    {
+      id: 2,
+      title: 'useRef',
+      body: `import { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom";
+
+function App() {
+  const [inputValue, setInputValue] = useState("");
+  const count = useRef(0);
+
+  useEffect(() => {
+    count.current = count.current + 1;
+  });
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h1>Render Count: {count.current}</h1>
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));`
     }
   ]
 };
 
-let initialId: number = 1;
+let initialId: number = 2;
 
 export const hookSlice = createSlice({
   name: 'hooks',
