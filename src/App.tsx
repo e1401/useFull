@@ -12,7 +12,6 @@ import ViewSingleHook from './pages/ViewSingleHook';
 
 function App() {
   return (
-    // <div className="App d-flex flex-column min-vh-100">
     <div className="App d-flex flex-column min-vh-100">
       <BrowserRouter>
         <Nav />
