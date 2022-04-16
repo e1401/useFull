@@ -4,18 +4,8 @@ import { Navbar, Container } from 'react-bootstrap';
 
 function Nav() {
   return (
-    // <div className="navbarContainer">
-    //   <Link to="/">
-    //     <h3>useFull</h3>
-    //   </Link>
-
-    //
-    //     <li></li>
-    //   </div>
-    // </div>
-
     //BOOTSTRAP NAVBAR
-    <>
+    <nav>
       <Navbar bg="light">
         <Container>
           <Link to="/">
@@ -23,11 +13,11 @@ function Nav() {
           </Link>
           <div className="navbarItems">
             <li>
-              <Link to="/createhook">Create a hook</Link>
+              <Link to="hooks/create">Create a hook</Link>
             </li>
 
             <li>
-              <Link to="/hooklist">List of hooks</Link>
+              <Link to="hooks/list">List of hooks</Link>
             </li>
             <li>
               {/* todo */}
@@ -36,7 +26,7 @@ function Nav() {
           </div>
         </Container>
       </Navbar>
-    </>
+    </nav>
   );
 }
 

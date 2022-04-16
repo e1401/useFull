@@ -9,7 +9,7 @@ import '../App.css';
 function HookList() {
   const hooks = useSelector(selectHooks);
   const dispatch = useDispatch();
-  console.log(hooks);
+  // console.log(hooks);
 
   const handleDelete = (id: number) => {
     console.log('hook id is', id);
@@ -21,7 +21,9 @@ function HookList() {
       <Container fluid="sm" className=" mt-3">
         <h2>List of hooks</h2>
         {hooks.map((hook) => (
-          <SingleHook key={hook.id} id={hook.id} title={hook.title} body={hook.body} />
+          <div key={hook.id}>
+            <SingleHook id={hook.id} title={hook.title} body={hook.body} />
+          </div>
         ))}
       </Container>
     </div>
