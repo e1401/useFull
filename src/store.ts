@@ -1,4 +1,6 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Action } from 'history';
+import { idText } from 'typescript';
 
 type Hook = {
   id?: number;
@@ -67,6 +69,11 @@ export const hookSlice = createSlice({
     },
     removeHook: (state, action: PayloadAction<number>) => {
       state.hooks = state.hooks.filter(({ id }) => id !== action.payload);
+    },
+    editHook: (state, action: PayloadAction<Hook>) => {
+      let hookToEdit = state.hooks.filter(({ id }) => id === action.payload.id);
+      const { id, title, body } = action.payload;
+      state.hooks = [...state.hooks, { ...hookToEdit, id, title, body }];
     }
   }
 });
