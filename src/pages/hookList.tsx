@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { Container } from 'react-bootstrap';
 import { selectHooks } from '../store';
@@ -15,7 +15,7 @@ function HookList() {
 
         {hooks.map((hook) =>
           hook.id !== undefined ? (
-            <SingleHook id={hook.id} title={hook.title} body={hook.body} />
+            <SingleHook key={hook.id} id={hook.id} title={hook.title} body={hook.body} />
           ) : (
             <p>ID is undefinded</p>
           )

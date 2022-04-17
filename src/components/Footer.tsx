@@ -8,10 +8,12 @@ function Footer() {
   return (
     <footer className="footer mt-auto py-3">
       <Container fluid className="mt-5">
-        <Row xs={1} md={2} className="justify-content-end">
-          <div className="mb-3">
-            <p className="fs-6 text-muted">
-              TypeScript adventures with <a href="http://ah-studio.net">Ah-studio</a> (c) {year}{' '}
+        <Row>
+          <div className="mb-2 d-flex flex-row-reverse">
+            <p
+              className="fs-9
+             text-muted small">
+              Adventures in TypeScript; <a href="http://ah-studio.net">Ah-studio</a> (c) {year}{' '}
             </p>
           </div>
         </Row>

@@ -12,29 +12,25 @@ function CreateHook() {
   //complete hook
   const [hookTitle, setHookTitle] = useState('');
   const [hookBody, setHookBody] = useState('');
-  const [completeHook, setCompleteHook] = useState({
-    title: '',
-    body: ''
-  });
 
   //dispatch to store
   const dispatch = useDispatch();
 
-  const handleTitleChange = (e: any) => {
+  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setHookTitle(e.target.value);
   };
 
-  const handleBodyChange = (e: any) => {
+  const handleBodyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setHookBody(e.target.value);
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (hookTitle.length === 0 || hookBody.length === 0) {
       alert('Please enter hook title and hook code');
       return;
     }
-    setCompleteHook({ title: hookTitle, body: hookBody });
+
     dispatch(addHook({ title: hookTitle, body: hookBody }));
     setHookTitle('');
     setHookBody('');

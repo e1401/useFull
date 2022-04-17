@@ -16,7 +16,7 @@ function SingleHook({ id, title, body }: { id: number; title?: string; body?: st
 
   let stringId = id.toString();
   return (
-    <Container fluid="sm" className=" mt-5 mb-5">
+    <Container fluid="sm" className="mt-5 mb-5">
       <div className="viewHook">
         <h3> {title}</h3>
         <p>Code:</p>

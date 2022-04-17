@@ -5,7 +5,7 @@ import { Navbar, Container } from 'react-bootstrap';
 function Nav() {
   return (
     <nav>
-      <Navbar bg="light" className="mb-3">
+      <Navbar bg="light" className="mb-3 shadow-sm">
         <Container>
           <Link to="/">
             <Navbar.Brand>
