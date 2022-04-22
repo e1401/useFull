@@ -10,8 +10,8 @@ function CreateHook() {
   //hookTitle
   //hookBody
   //complete hook
-  const [hookTitle, setHookTitle] = useState('');
-  const [hookBody, setHookBody] = useState('');
+  const [hookTitle, setHookTitle] = useState<string>('');
+  const [hookBody, setHookBody] = useState<string>('');
 
   //dispatch to store
   const dispatch = useDispatch();

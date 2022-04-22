@@ -17,7 +17,7 @@ function HookList() {
           hook.id !== undefined ? (
             <SingleHook key={hook.id} id={hook.id} title={hook.title} body={hook.body} />
           ) : (
-            <p>ID is undefinded</p>
+            <p>ID is undefined</p>
           )
         )}
       </Container>

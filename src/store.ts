@@ -1,6 +1,4 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Action } from 'history';
-import { idText } from 'typescript';
 
 type Hook = {
   id?: number;
@@ -78,7 +76,7 @@ export const hookSlice = createSlice({
   }
 });
 
-export const { addHook, removeHook } = hookSlice.actions;
+export const { addHook, editHook, removeHook } = hookSlice.actions;
 
 const store = configureStore({
   reducer: {
